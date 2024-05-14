@@ -21,7 +21,8 @@
 
 4. If you use Anaconda, create a new environment and activate it
    ```bash
-   conda create --name dify python=3.10
+   <!-- conda create --name dify python=3.10 -->
+   conda create --name dify python=3.11
    conda activate dify
    ```
 5. Install dependencies
@@ -48,6 +49,17 @@
 
    ```
    pip install -r requirements.txt --upgrade --force-reinstall
+   ```
+
+   ```
+   > flask db upgrade
+   Error: Warning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+   ```
+
+   Please run the following command.
+
+   ```
+   conda install -c conda-forge ffmpeg
    ```
 
 7. Start backend:
